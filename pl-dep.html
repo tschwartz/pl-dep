@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="pl-dep">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `pl-dep`
+     * A Pattern Library Component Proof of concept
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PlDep extends Polymer.Element {
+      static get is() { return 'pl-dep'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'pl-dep'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PlDep.is, PlDep);
+  </script>
+</dom-module>
